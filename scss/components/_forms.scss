@@ -1,0 +1,45 @@
+@use '../abstract' as *;
+
+.newsletter__form {
+
+  &-control {
+    display: grid;
+    grid-template-areas: 
+    "label . error"
+    "input input input"
+    "submit submit submit";
+    // grid-template-columns: 1fr 1fr;
+
+    // display: flex;
+    // flex-direction: column;
+    // margin-block-end: 1.5rem;
+    // gap: 8px;
+
+    label {
+      color: $dark-navy;
+      font-weight: $fw-bold;
+      font-size: $font-size-sm-body;
+      grid-area: label;
+    }
+
+    #email-error {
+      display: none;
+      font-size: $font-size-sm-body;
+      font-weight: $fw-bold;
+      color: $vermellion;
+      grid-area: error;
+      justify-self: end;
+
+    }
+
+    input {
+      border: 1px solid $light-grey;
+      padding-inline-start: 1.5rem;
+      padding-block: 1rem;
+      border-radius: 8px;
+      grid-area: input;
+      margin-block-start: 8px;
+      margin-block-end: 1.5rem;
+    }
+  }
+}

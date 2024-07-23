@@ -1,0 +1,171 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.newsletter__right-col {
+  color: hsl(234, 29%, 20%);
+  padding-inline: 1.5rem;
+  padding-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+.newsletter__right-col .newsletter__heading {
+  font-size: 2.5rem;
+}
+.newsletter__right-col .newsletter__feature-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.newsletter__right-col .newsletter__feature-list li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+.newsletter__right-col .newsletter__feature-list li:not(.newsletter__right-col .newsletter__feature-list li:last-child) {
+  margin-block-end: 10px;
+}
+
+.newsletter__form-control {
+  display: grid;
+  grid-template-areas: "label . error" "input input input" "submit submit submit";
+}
+.newsletter__form-control label {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 0.75rem;
+  grid-area: label;
+}
+.newsletter__form-control #email-error {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(4, 100%, 67%);
+  grid-area: error;
+  justify-self: end;
+}
+.newsletter__form-control input {
+  border: 1px solid hsla(243, 28%, 13%, 0.25);
+  padding-inline-start: 1.5rem;
+  padding-block: 1rem;
+  border-radius: 8px;
+  grid-area: input;
+  margin-block-start: 8px;
+  margin-block-end: 1.5rem;
+}
+
+.btn__submit {
+  width: 100%;
+  padding-block: 1.125rem;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  grid-area: submit;
+}
+
+body {
+  background-color: hsl(234, 17%, 26%);
+  font-family: "Roboto", sans-serif;
+}
+
+.newsletter__left-col {
+  background-color: hsl(0, 0%, 100%);
+}
+.newsletter__left-col .img__mobile {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
+}
+
+.newsletter__right-col {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

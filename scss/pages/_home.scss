@@ -1,0 +1,21 @@
+@use '../abstract' as *;
+
+
+body {
+  background-color: $pale-navy;
+  font-family: $main-font-family;
+}
+
+.newsletter__left-col {
+  background-color: $white;
+
+  .img__mobile {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    width: 100%;
+  }
+}
+
+.newsletter__right-col {
+  background-color: $white;
+}

@@ -10,16 +10,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
   <title>Newsletter sign-up form </title>
 
 </head>
 <body>
-  <main>
-    <section>
+  <main class="newsletter">
+    <section class="newsletter__left-col">
+      <picture>
+        <source media="(min-width: 64em)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign Up Mobile" class="img__mobile">
+      </picture>
+    </section>
+    <section class="newsletter__right-col">
       <h1 class="sr-only">Newsletter</h1>
-      <h2>Stay Updated!</h2>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
+      <h2 class="newsletter__heading">Stay Updated!</h2>
+      <p class="description">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="newsletter__feature-list">
         <li>
           <img src="./assets/images/icon-list.svg" alt="checked">
           <p>Product discovery and building what matters</p>
@@ -34,20 +41,14 @@
         </li>
       </ul>
 
-      <form>
-      <div>
-        <label for="email">Email Address</label>
+      <form class="newsletter__form">
+      <div class="newsletter__form-control">
+        <label for="email" name="email">Email Address</label>
         <span aria-live="polite" id="email-error">Valid email required</span>
-        <input type="email" required>
+        <input type="email" name="email" required placeholder="email@company.com">
       </div>
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <button type="submit" class="btn__submit">Subscribe to monthly newsletter</button>
       </form>
-    </section>
-    <section>
-      <picture>
-        <source media="(min-width: 64em)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
-      </picture>
     </section>
   </main>
 </body>
