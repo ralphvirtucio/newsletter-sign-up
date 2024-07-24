@@ -7,17 +7,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">  
   <script src="index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Newsletter Success Message</title>
 </head>
-<body>
+<body class="newsletter__success">
   <main>
-    <section>
+    <section class="content">
       <h1 class="sr-only">Newsletter success message</h1>
       <img src="./assets/images/icon-success.svg" alt="success checked">
       <h2>Thanks for subscribing!</h2>
       <p>A confirmation email has been sent to <span id="js-email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm confirm your subscription</p>
-      <button type="button">Dismiss message</button>
     </section>
+    <button type="button" class="btn__success">Dismiss message</button>
   </main>
 </body>
 </html>

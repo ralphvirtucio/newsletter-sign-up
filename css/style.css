@@ -150,7 +150,17 @@ select {
   grid-area: submit;
 }
 
-body {
+.btn__success {
+  width: 100%;
+  padding-block: 1.125rem;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.newsletter__home {
   background-color: hsl(234, 17%, 26%);
   font-family: "Roboto", sans-serif;
 }
@@ -166,6 +176,30 @@ body {
 
 .newsletter__right-col {
   background-color: hsl(0, 0%, 100%);
+}
+
+.newsletter__success {
+  font-family: "Roboto", sans-serif;
+}
+.newsletter__success main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+.newsletter__success main section {
+  flex: 1;
+  margin-block-start: 5rem;
+  color: hsl(234, 29%, 20%);
+}
+.newsletter__success main section h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-block: 1.5rem;
+}
+.newsletter__success main section span {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

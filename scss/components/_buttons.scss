@@ -10,3 +10,15 @@
   font-weight: $fw-bold;
   grid-area: submit;
 }
+
+
+.btn__success {
+  width:100%;
+  padding-block: 1.125rem;
+  background-color: $dark-navy;
+  border: none;
+  border-radius: 8px;
+  color: $white;
+  font-weight: $fw-bold;
+  
+}

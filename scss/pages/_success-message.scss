@@ -1,0 +1,32 @@
+@use '../abstract' as *;
+
+.newsletter__success {
+  font-family: $main-font-family;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    
+    section {
+      flex: 1;
+      margin-block-start: 5rem;
+      color: $dark-navy;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 1;
+        margin-block: 1.5rem;
+      }
+
+      p {
+      }
+
+      span {
+        font-weight: $fw-bold;
+      }
+    }
+  }
+}

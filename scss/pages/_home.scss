@@ -1,10 +1,11 @@
 @use '../abstract' as *;
 
 
-body {
-  background-color: $pale-navy;
-  font-family: $main-font-family;
+.newsletter__home {
+    background-color: $pale-navy;
+    font-family: $main-font-family;
 }
+
 
 .newsletter__left-col {
   background-color: $white;
