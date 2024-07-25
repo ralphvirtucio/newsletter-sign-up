@@ -2,6 +2,10 @@
 
 .newsletter__form {
 
+
+  @include breakpoint(laptop) {
+    margin-block-start: 2.5rem;
+  }
   &-control {
     display: grid;
     grid-template-areas: 

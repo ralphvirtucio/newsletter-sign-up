@@ -3,25 +3,73 @@
 
 body {
   background-color: $pale-navy;
+  font-family: $main-font-family;
 }
 
 
 .newsletter__home {
-    background-color: $pale-navy;
-    font-family: $main-font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+    main {
+      background-color: $white;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 36px;
+        gap: 2.5rem;
+        margin-inline: 2rem;
+      }
+
+      @include breakpoint(laptop) {
+        gap: 4rem;
+      }
+
+      & > section {
+        flex: 1;
+      }
+    }
 }
 
 
 .newsletter__left-col {
-  background-color: $white;
+
+  @include breakpoint(tablet) {
+    padding-inline-end: 1.5rem;
+    padding-block: 1.5rem;
+  }
 
   .img__mobile {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
   }
 }
 
 .newsletter__right-col {
-  background-color: $white;
+  padding-inline: 1.5rem;
+  padding-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+
+  @include breakpoint(tablet) {
+    padding-block: 0px;
+    padding-inline: 0px;
+  }
+
+  @include breakpoint(laptop) {
+    padding-inline-start: 4rem;
+  }
+
 }
