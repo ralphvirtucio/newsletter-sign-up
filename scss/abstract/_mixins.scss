@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+
+/**
+  * Breakpoint mixins reference: https://dev.to/oler/using-mixins-with-scss-to-create-breakpoints-8g6
+     Example Usage
+  *  1. @include breakpoint(small)
+  *  2. @include breakpoint(medium)
+  *  3. @include breakpoint(large)
+  *   {
+  *   properties content
+  * }
+  */
+
+
+  @mixin breakpoint($point) {
+    @if $point == tablet {
+      @media (min-width: map-get($breakpoints, 'tablet')) {@content;}
+    }
+    @else if $point == laptop {
+      @media (min-width: map-get($breakpoints, 'laptop')) { @content; }
+    }
+    @else if $point == desktop {
+      @media (min-width: map-get($breakpoints, 'desktop')) { @content; }
+    }
+  }

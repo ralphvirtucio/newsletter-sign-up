@@ -2,6 +2,13 @@
 
 .newsletter__success {
   font-family: $main-font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+
 
   main {
     display: flex;
@@ -9,19 +16,42 @@
     justify-content: center;
     min-height: 100vh;
     padding: 1.5rem;
+    background-color: $white;
+    max-width: 31rem;
+    gap: 2rem;
+    
+    @include breakpoint(tablet) {
+      margin-block: 2rem;
+      border-radius: 36px;
+      padding-block-start: 3rem;
+      padding-block-end: 4rem;
+      padding-inline: 4rem;
+      min-height: auto;
+      align-items: center;
+      gap: 0px;
+    }
     
     section {
       flex: 1;
       margin-block-start: 5rem;
       color: $dark-navy;
 
+      @include breakpoint(tablet) {
+        flex: 0 1 auto;
+        margin-block-start: 0;
+        margin-block-end: 2.5rem;
+      }
+
       h2 {
         font-size: 2rem;
         line-height: 1;
         margin-block: 1.5rem;
-      }
 
-      p {
+        @include breakpoint(tablet) {
+          margin-block-start: 2.5rem;
+          font-size: $font-size-heading;
+          
+        }
       }
 
       span {
