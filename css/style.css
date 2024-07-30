@@ -130,6 +130,9 @@ select {
   grid-area: error;
   justify-self: end;
 }
+.newsletter__form-control .invalid-email {
+  display: block;
+}
 .newsletter__form-control input {
   border: 1px solid hsla(243, 28%, 13%, 0.25);
   padding-inline-start: 1.5rem;
@@ -138,6 +141,29 @@ select {
   grid-area: input;
   margin-block-start: 8px;
   margin-block-end: 1.5rem;
+  color: hsl(234, 29%, 20%);
+}
+.newsletter__form-control input:valid {
+  background-color: #fff;
+  color: hsl(234, 29%, 20%);
+  outline: auto;
+}
+.newsletter__form-control input:invalid {
+  background-color: hsla(4, 100%, 67%, 0.15);
+  color: #FF527B;
+  outline: 1px solid hsl(4, 100%, 67%);
+}
+.newsletter__form-control input:invalid::placeholder {
+  color: inherit;
+}
+.newsletter__form-control input:focus {
+  outline: 1px solid hsl(234, 29%, 20%);
+}
+.newsletter__form .btn__submit {
+  cursor: pointer;
+}
+.newsletter__form .btn__submit:hover {
+  background-image: linear-gradient(to right, #FF6A3A, #FF527B);
 }
 
 .btn__submit {
@@ -235,8 +261,8 @@ body {
 }
 @media (min-width: 48em) {
   .newsletter__right-col {
-    padding-block: 0px;
-    padding-inline: 0px;
+    padding-block: 2rem;
+    padding-inline: 2rem;
   }
 }
 @media (min-width: 64em) {

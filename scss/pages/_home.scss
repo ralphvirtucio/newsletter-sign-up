@@ -64,8 +64,8 @@ body {
   gap: 1.5rem;
 
   @include breakpoint(tablet) {
-    padding-block: 0px;
-    padding-inline: 0px;
+    padding-block: 2rem;
+    padding-inline: 2rem;
   }
 
   @include breakpoint(laptop) {

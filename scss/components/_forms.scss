@@ -12,12 +12,6 @@
     "label . error"
     "input input input"
     "submit submit submit";
-    // grid-template-columns: 1fr 1fr;
-
-    // display: flex;
-    // flex-direction: column;
-    // margin-block-end: 1.5rem;
-    // gap: 8px;
 
     label {
       color: $dark-navy;
@@ -36,6 +30,10 @@
 
     }
 
+    .invalid-email {
+      display: block;
+    }
+
     input {
       border: 1px solid $light-grey;
       padding-inline-start: 1.5rem;
@@ -44,6 +42,35 @@
       grid-area: input;
       margin-block-start: 8px;
       margin-block-end: 1.5rem;
+      color: $dark-navy;
+
+
+      &:valid {
+        background-color: #fff;
+        color: $dark-navy;
+        outline: auto;
+      }
+
+      &:invalid {
+        background-color: hsla(4, 100, 67, 0.15);
+        color: #FF527B;
+        outline: 1px solid $vermellion;
+
+        &::placeholder {
+          color: inherit;
+        }
+      }
+
+      &:focus {
+        outline: 1px solid $dark-navy;
+      }
+    }
+  }
+  .btn__submit {
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(to right, #FF6A3A, #FF527B);
     }
   }
 }
