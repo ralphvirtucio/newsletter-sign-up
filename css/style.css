@@ -180,6 +180,11 @@ select {
   border-radius: 8px;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.btn__success:hover {
+  background-image: linear-gradient(to right, #ff6a3a, #ff527b);
 }
 
 .newsletter__feature-list {

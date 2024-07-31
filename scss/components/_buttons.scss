@@ -20,5 +20,10 @@
   border-radius: 8px;
   color: $white;
   font-weight: $fw-bold;
-  
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-image: linear-gradient(to right, #ff6a3a, #ff527b);
+  }
 }
