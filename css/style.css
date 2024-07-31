@@ -130,7 +130,7 @@ select {
   grid-area: error;
   justify-self: end;
 }
-.newsletter__form-control .invalid-email {
+.newsletter__form-control #email-error.invalid-email {
   display: block;
 }
 .newsletter__form-control input {
@@ -143,17 +143,12 @@ select {
   margin-block-end: 1.5rem;
   color: hsl(234, 29%, 20%);
 }
-.newsletter__form-control input:valid {
-  background-color: #fff;
-  color: hsl(234, 29%, 20%);
-  outline: auto;
-}
-.newsletter__form-control input:invalid {
-  background-color: hsla(4, 100%, 67%, 0.15);
-  color: #FF527B;
+.newsletter__form-control input#email.invalid {
+  color: #ff527b;
   outline: 1px solid hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.15);
 }
-.newsletter__form-control input:invalid::placeholder {
+.newsletter__form-control input#email.invalid::placeholder {
   color: inherit;
 }
 .newsletter__form-control input:focus {
@@ -163,7 +158,7 @@ select {
   cursor: pointer;
 }
 .newsletter__form .btn__submit:hover {
-  background-image: linear-gradient(to right, #FF6A3A, #FF527B);
+  background-image: linear-gradient(to right, #ff6a3a, #ff527b);
 }
 
 .btn__submit {

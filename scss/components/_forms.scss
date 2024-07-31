@@ -1,17 +1,15 @@
 @use '../abstract' as *;
 
 .newsletter__form {
-
-
   @include breakpoint(laptop) {
     margin-block-start: 2.5rem;
   }
   &-control {
     display: grid;
-    grid-template-areas: 
-    "label . error"
-    "input input input"
-    "submit submit submit";
+    grid-template-areas:
+      'label . error'
+      'input input input'
+      'submit submit submit';
 
     label {
       color: $dark-navy;
@@ -28,11 +26,12 @@
       grid-area: error;
       justify-self: end;
 
-    }
-
-    .invalid-email {
+      &.invalid-email {
       display: block;
     }
+    }
+
+    
 
     input {
       border: 1px solid $light-grey;
@@ -44,17 +43,10 @@
       margin-block-end: 1.5rem;
       color: $dark-navy;
 
-
-      &:valid {
-        background-color: #fff;
-        color: $dark-navy;
-        outline: auto;
-      }
-
-      &:invalid {
-        background-color: hsla(4, 100, 67, 0.15);
-        color: #FF527B;
+      &#email.invalid {
+        color: #ff527b;
         outline: 1px solid $vermellion;
+        background-color: hsla(4, 100, 67, 0.15);
 
         &::placeholder {
           color: inherit;
@@ -70,7 +62,7 @@
     cursor: pointer;
 
     &:hover {
-      background-image: linear-gradient(to right, #FF6A3A, #FF527B);
+      background-image: linear-gradient(to right, #ff6a3a, #ff527b);
     }
   }
 }
