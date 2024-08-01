@@ -226,6 +226,7 @@ body {
 @media (min-width: 64em) {
   .newsletter__home main {
     gap: 4rem;
+    margin-block: 2rem;
   }
 }
 .newsletter__home main > section {

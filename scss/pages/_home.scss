@@ -26,6 +26,7 @@ body {
 
       @include breakpoint(laptop) {
         gap: 4rem;
+        margin-block: 2rem;
       }
 
       & > section {
