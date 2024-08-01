@@ -2,21 +2,21 @@ const form = document.querySelector('#form')
 const emailInput = document.querySelector('#email')
 const emailErrorMsg = document.querySelector('#email-error')
 const submitBtn = document.querySelector('#btn__submit-form')
+const jsEmail = document.querySelector('#js-email')
+
 const emailRegExp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 
 function handleEmailInput(e) {
-  if(e.target.value.length === 0) {
     emailErrorMsg.textContent = ''
     emailErrorMsg.classList.remove('invalid-email')
     emailInput.classList.remove('invalid')
-  }
 }
 
 
 function handleSubmit(e) {
-  // e.preventDefault();
+  e.preventDefault();
 
   const isValid = emailInput.value.length === 0 || emailRegExp.test(emailInput.value)
   if(emailInput.value.length === 0)  {
@@ -32,10 +32,9 @@ function handleSubmit(e) {
     emailErrorMsg.textContent = ''
     emailErrorMsg.classList.remove('invalid-email')
     emailInput.classList.remove('invalid')
+    e.target.submit()
   }
 }
-
-
 
 emailInput.addEventListener('input', handleEmailInput)
 
