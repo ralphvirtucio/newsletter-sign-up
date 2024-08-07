@@ -337,6 +337,7 @@ const REGISTERED_DOMAINS = [
   ".trade",
   ".training",
   ".tube",
+  ".tld",
   ".uk",
   ".university",
   ".uno",
